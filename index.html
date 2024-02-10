@@ -6,27 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fGreat</title>
     
-    
-    
-    
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>-->
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">   
 </head>
 <body>
-<link rel="stylesheet" src="./css/style.css">
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>-->
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    
 
 
 <!------ Include the above in your HEAD tag ---------->
     <h5>Sesion Iniciada</h5><span id="´${email}´"></span><br>
     <button id="logout" class="btn btn-primary btn-btn-block" action="js/index.js" style="margin: 10px" >Cerrar Sesion</button><br>
+    <div class="form-group" id="whatsapp" >
+        <p>checked "checkbox"  y luego presione el boton  <span id="span2">  "Cerrar whatsapp"  </span> para cerrar la ventana  -> <input type="radio" name="select" id="select"></p> 
+        <img src="img/Untitled.png" alt="" width="200" height="200">
+        <p>Hola de nuevo, haz creado tu primer evento asi que ahora puedes contarnos más sobre tu 
+            receta por el whatsapp de la comunidad, estar al dia y no perderte ningun evento o simplemente pasar a saludar y conocer gente nueva.<span id="texto2"> Solo tienes que escanear el codigo QR</span></p>
+            <button class="btn btn-success" type="button" onclick="showDiv()">Cerrar whatsapp</button>
+    </div>
     <div class="container-group"style="left: 0px; position: absolute">
         <img src="img/logoo.png" alt="" width="1200" height="1200">
-        <link href="https://whatsapp.com/channel/0029VaIuvppDJ6H73Isdoc0P" id="whatsapp">
+        <link href="https://whatsapp.com/channel/0029VaIuvppDJ6H73Isdoc0P" >
+        
      </div>
-     <div class="container text-left col-md-4" height="200" width="200" margin="100,100,30,200">
-    <img src="img/Untitled.png" alt="" width="200">
-    </div>
+     
     <div class="container text-left col-md-4" style="right: 0px; position: relative">
         <div class="row">
             <ul class="thumbnails">
@@ -35,33 +39,33 @@
                     
                         <div class="form-group">
                             <h4> E-mail</E-mail>:</h4> 
-                            <input type="email" name="email" id="email" value="" placeholder="Escriba email" required><br><br>
+                            <input class="form-control" type="email" name="email" id="email"  placeholder="Escriba email"required><br><br>
                         </div>
                         <div class="form-group">
                             <h4>Fecha y Hora:</h4> 
-                        <input type="datetime-local" name="fname" id="datatime" value="" placeholder="Escriba la fecha" required><br>
+                        <input class="form-control" type="datetime-local" name="fname" id="datatime"  placeholder="Escriba la fecha" required><br>
                         </div>
                         <div class="form-group">
                             <h4> Evento:</h4> 
-                        <input type="text" name="fname" value="" id="despcripcion" placeholder="Escriba el evento" required><br>
+                        <input class="form-control" type="text" name="fname" id="despcripcion"  placeholder="Escriba el evento" required><br>
                         </div>
                         <div class="form-group">
                             <h4> Descripción:</h4> 
-                            <textarea style="width: 200px; height: 200px" type="text" name="lname" id="evento" value="" placeholder="Escriba la descipcion" required></textarea><br><br>
+                            <textarea class="form-control" style="width: 200px; height: 100px"  type="text" id="evento" placeholder="Escriba la descipcion " required></textarea><br><br>
                         </div>
                         <div class="form-group" hidden>
                            <input type="radio" name="select" id="select">
                         </div>
-                    <!--<button class="btn btn-primary" onclick="myFunction()">Crear Evento</button>-->
-                    <button class="btn btn-success" type="button" id="btnSaveFriend">Crear Evento</button> 
-                   
-                  </form><br>
+                    
+                    <button class="btn btn-primary" type="submit" id="btnSaveFriend"> Crear Evento</button> 
+                    <a href="#" type="submit"  onclick="showDiv()"  >Cerrar whatsapp</a>
+                </form><br> 
                   
-                                   
             </ul>
-        </div>
+            
+        </div>   
     </div>
-     
+    
 
 <div class="container">
     <h4 class="text-center" style=" position: relative">Eventos Creados fGre@t</h4>
@@ -89,6 +93,7 @@
 <!--<script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
 
 <script src="js/index.js"></script>
+<script src="js/app.js"></script>
    
 </body>
 </html>
