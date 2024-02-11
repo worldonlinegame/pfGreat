@@ -6,7 +6,8 @@ function addFriendToSystem(email,datatime, despcripcion, evento, SelectCell) {
         datatime: datatime,
         despcripcion: despcripcion,
         evento: evento,
-        SelectCell: SelectCell
+        SelectCell: SelectCell,
+        petList:[]
       };
       if(email == "" || datatime == "" || despcripcion == "" || evento == ""){
         alert('ERROR ! No se puede guardar si los campos estan vacios, tienes que rellenar todos los campos!');
@@ -40,4 +41,37 @@ function localStorageFriendList(pList) {
     localStorage.setItem("localFriendList", JSON.stringify(pList));
     
   }
+  
+ /* logica de comentario del evento */
+
+
+/* funcion buscar id post del evento*/
+
+function findFriend(pemail){
+  var friendObj;
+  for(var i = 0; i < friendList.length; i ++){
+    if(friendList[i].email == pemail){
+      friendObj = friendList[i];
+
+    }
+  }
+  return friendObj;
+}
+
+/* funcion añadir comentario seleccionado por id*/
+
+function addPetToFriend(pfriendObj, ppetName, ptype, pgender){
+  var newPet = {
+    name: ppetName,
+    type: ptype,
+    gender: pgender
+  }
+  var index = friendList.indexOf(pfriendObj);
+  pfriendObj.petList.push(newPet);
+
+  friendList[index] = pfriendObj;
+  localStorageFriendList(friendList);
+
+ }
+  
   
