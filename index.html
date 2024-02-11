@@ -19,19 +19,20 @@
     <h5>Sesion Iniciada</h5><span id="´${email}´"></span><br>
     <button id="logout" class="btn btn-primary btn-btn-block" action="js/index.js" style="margin: 10px" >Cerrar Sesion</button><br>
     <div class="form-group" id="whatsapp" >
-        <p>checked "checkbox"  y luego presione el boton  <span id="span2">  "Cerrar whatsapp"  </span> para cerrar la ventana  -> <input type="radio" name="select" id="select"></p> 
+        
         <img src="img/Untitled.png" alt="" width="200" height="200">
         <p>Hola de nuevo, haz creado tu primer evento asi que ahora puedes contarnos más sobre tu 
             receta por el whatsapp de la comunidad, estar al dia y no perderte ningun evento o simplemente pasar a saludar y conocer gente nueva.<span id="texto2"> Solo tienes que escanear el codigo QR</span></p>
+            <p>checked "checkbox"  y luego presione el boton  <span id="span2">  "Cerrar whatsapp"  </span> para cerrar la ventana  -> <input type="radio" name="select" id="select"></p> 
             <button class="btn btn-success" type="button" onclick="showDiv()">Cerrar whatsapp</button>
     </div>
-    <div class="container-group"style="left: 0px; position: absolute">
-        <img src="img/logoo.png" alt="" width="1200" height="1200">
+    <div class="container-group"style="content: center 0px;">
+        <img src="img/logoo.png" alt="" width="400" height="400">
         <link href="https://whatsapp.com/channel/0029VaIuvppDJ6H73Isdoc0P" >
         
      </div>
      
-    <div class="container text-left col-md-4" style="right: 0px; position: relative">
+    <div class="container text-center col-md-4" style="right: 0px; position: relative">
         <div class="row">
             <ul class="thumbnails">
                 
@@ -51,16 +52,16 @@
                         </div>
                         <div class="form-group">
                             <h4> Descripción:</h4> 
-                            <textarea class="form-control" style="width: 200px; height: 100px"  type="text" id="evento" placeholder="Escriba la descipcion " required></textarea><br><br>
+                            <input class="form-control" style="width: 100%; height: 100px"  type="text" id="evento" placeholder="Escriba la descipcion " required><br><br>
                         </div>
                         <div class="form-group" hidden>
-                           <input type="radio" name="select" id="select">
+                           <input type="radio" name="select" id="select" required>
                         </div>
                     
                     <button class="btn btn-primary" type="submit" id="btnSaveFriend"> Crear Evento</button> 
-                    <a href="#" type="submit"  onclick="showDiv()"  >Cerrar whatsapp</a>
+                   
                 </form><br> 
-                  
+                <a href="#" type="submit"  onclick="showDiv()"  >Ir a la Comunidad fGreat del whatsapp</a>
             </ul>
             
         </div>   
@@ -77,6 +78,55 @@
                 <th>Evento</th>
                 <th>Descipcion</th>
                 <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>   
+    </table>
+</div>
+<!--  Formulario de respuestas de eventos -->
+
+<div class="container text-center col-md-4" style="right: 0px; position: relative">
+    <div class="row">
+        <ul class="thumbnails">
+            
+            <form class="form-group">
+                
+                <div class="form-group">
+                    <h4> Escribe tu correo:</h4> 
+                    <label for="txtPetName"></label>
+                <input class="form-control" type="email" id="txtPetName"  placeholder="Escribe tu E-mail" required><br>
+                </div>
+                <div class="form-group">
+                    <h4> Mensaje:</h4> 
+                    <label for="txtAnimal"></label>
+                <input class="form-control" type="text" id="txtAnimal"  placeholder="Escriba el mensaje o la pregunta.." required><br>
+                </div>
+                <div class="form-group">
+                    <h4> Evento:</h4> 
+                    <label for="txtGender"></label>
+                <input class="form-control" type="datetime-local" id="txtGender"  placeholder="Escriba el evento" required><br>
+                </div>
+                
+                <button class="btn btn-primary" type="submit" id="btnAssignPet"> Crear Evento</button> <br>
+                
+            </form><br> 
+            <a href="#" type="submit"  onclick="showDiv()"  >Ir a la Comunidad fGreat del whatsapp</a> 
+        </ul>
+        
+    </div>   
+</div>
+
+<div class="container">
+    <h4 class="text-center" style=" position: relative">Eventos Creados fGre@t</h4>
+    <table id="petsTable" class="table table-striped" style=" position: relative">
+        <thead>
+            <tr>
+                <th>Mensaje para:</th>
+                <th>De:</th>
+                <th>Mensaje</th>
+                <th>Evento:</th>     
             </tr>
         </thead>
         <tbody>
