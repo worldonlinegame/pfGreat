@@ -1,30 +1,79 @@
+
 body {
-  
-  background-color: #8ad1e2;
+  background-color: #abdeeb;
   
   }
   
-   #whatsapp {
-    
+  #whatsapp {
+  margin-bottom: 0px;
+  margin-left: 100px;
+  
   display: none;
   position: fixed relative;
   height:"100%"; 
   width:"100%"; 
   }
   
-  p {
-  border: 4px solid black;
-  background-color: rgb(194, 238, 200);
-  /* clips the background color to content only */
-  background-clip: content-box;
-  width: 300px;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 10px;
+  p{
+  margin-top: 200px;
+  margin-left: 0px;
+  padding: 20px;
+  background-color: #cdf0ac;
+  width: 400px;
+  height: 200px;
+  border: #333 solid 2px;
+  
   }
   
-  span {
+  
+  
+  #texto2 {
+  background-color: burlywood;
   font-weight: bold;
   color: red;
   }
+  
+  a {
+    font-style: none;
+    padding-left: 50px;
+    font-size: large;
+    
+  }
+  
+  
+  
+    /* css navbar */
+  
+  #logout{
+  margin:auto;
+  }
+  
+  
+  #navbar {
+  background-color: #333;
+  position: fixed;
+  top: 0px;
+  width: 101%;
+  margin-right: 0px;
+  display:block;
+  transition: top 0.3s;
+  }
+  
+  #navbar a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  }
+  
+  #navbar a:hover {
+  background-color: #a2a6b1;
+  color: black;
+  }
+  
+  /* css icons email y tel*/
+  
   
