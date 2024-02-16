@@ -7,7 +7,6 @@
     <title>fGreat</title>
    
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">  
 </head>
@@ -17,7 +16,6 @@
             <div id="navbar">
                 <button id="logout" class="btn btn-primary btn-btn-block" action="js/index.js" style="margin: 10px" >Cerrar Sesion</button>
       <a href="contact.html">Contacto</a>
-      <a href="#news">News</a>
       <a href="#" type="submit"  onclick="showDiv()"  >whatsapp</a>
     </div>
 
@@ -28,16 +26,18 @@
             receta por el whatsapp de la comunidad, estar al dia y no perderte ningun evento o simplemente pasar a saludar y conocer gente nueva.<span id="texto2"> Solo tienes que escanear el codigo QR</span>
             checked "checkbox"  y luego presione el boton  <span id="span2">  "Cerrar whatsapp"  </span> para cerrar la ventana  -> <input type="radio" name="select" id="select"></p> 
             <button class="btn btn-success" type="button" onclick="showDiv()">Cerrar whatsapp</button>
-            <img src="img/Untitled.png" alt="" width="200" height="200">
+            <img src="img/Untitled.png" alt="">
     </div>
+    <img src="img/logoo.png" alt="">
+    <p>Es hora de crear tu primera Receta <span id="texto2">rellenar el formulario "Eventos Creados fGreat</span>" </p>
     
     <div class="container-group"style="content: center 0px;">
-        <img src="img/logoo.png" alt="" width="400" height="400">
+        
         <link href="https://whatsapp.com/channel/0029VaIuvppDJ6H73Isdoc0P" >
         
      </div>
      
-    <div class="container text-center col-md-4" style="right: 0px; position: relative">
+    <div class="container text-center position: relative">
         <div class="row">
             <ul class="thumbnails">
                 
@@ -57,8 +57,8 @@
                         </div>
                         <div class="form-group">
                             <h4> Descripción:</h4> 
-                            <input class="form-control" style="width: 100%; height: 100px"  type="text" id="evento" placeholder="Escriba la descipcion " required><br><br>
-                        </div>
+                            <input class="form-control"  type="text" id="evento" placeholder="Escriba la descipcion " required><br><br>
+                        </div>         
                         <div class="form-group" hidden>
                            <input type="radio" name="select" id="select">
                         </div>
@@ -91,8 +91,8 @@
     </table>
 </div>
 <!--  Formulario de respuestas de eventos -->
-
-<div class="container text-center col-md-4" style="right: 0px; position: relative" id="chatsEvento">
+<p>Ahora ya puedes enviar consultas al evento que estes interesad@, solo tienes que seleccionar <span id="texto2">checked "Acciones"</span> del evento al que quieres hacer la consulta y <span id="texto2">rellenar el formulario "Consult@s de los Eventos</span>" </p>
+<div class="container text-center position: relative" id="chatsEvento">
     <div class="row">
         <ul class="thumbnails">
             
@@ -111,10 +111,10 @@
                 <div class="form-group">
                     <h4> Evento:</h4> 
                     <label for="txtGender"></label>
-                <input class="form-control" type="datetime-local" id="txtGender"  placeholder="Escriba el evento" required><br>
+                <input class="form-control" type="datetime-local" id="txtGender" placeholder="Escriba el evento" required><br>
                 </div>
                 
-                <button class="btn btn-primary" type="submit" id="btnAssignPet"> Crear Evento</button> <br>
+                <button class="btn btn-primary" type="submit" id="btnAssignPet"> Enviar consulta</button> <br>
                 
             </form><br> 
            
@@ -124,7 +124,7 @@
 </div>
 
 <div class="container">
-    <h4 class="text-center" style=" position: relative">Eventos Creados fGre@t</h4>
+    <h4 class="text-center" style=" position: absolute"> Consult@s del los Eventos</h4>
     <table id="petsTable" class="table table-striped" style=" position: relative">
         <thead>
             <tr>
@@ -135,8 +135,6 @@
             </tr>
         </thead>
         <tbody>
-            
-            
 
         </tbody>   
     </table>    
@@ -150,7 +148,7 @@
 <!--<script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
 
 <script src="js/index.js"></script>
-<script src="js/app.js"></script>
+
    
 </body>
 </html>
