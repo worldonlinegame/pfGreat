@@ -1,8 +1,29 @@
 document.querySelector('#btnSaveFriend').addEventListener('click', seveFriend);
 document.querySelector('#btnAssignPet').addEventListener('click', addPet);
+const divContainer = document.querySelector('#whatsapp');
 
 drawFriendsTable();
 drawPetsTable();
+
+
+let select = document.querySelector('#select');
+let isClicked = true;
+
+select.checked = false;
+
+let showDiv  = function () {
+    if (isClicked || !select.checked) {
+        divContainer.style.display = 'block';
+        isClicked = false;
+   
+    } else {
+        divContainer.style.display = 'none';
+        isClicked = true;
+        location = window.location.href = "index.html";
+     
+    }
+    
+}
 
 function seveFriend() {
 
@@ -59,17 +80,20 @@ function seveFriend() {
 
   function addPet(){
     var sName = document.querySelector('#txtPetName').value,
-
         sType = document.querySelector('#txtAnimal').value,  
-
         sGender = document.querySelector('#txtGender').value,
         sOwnerId = document.querySelector('#friendsTable tbody input[type=radio]:checked').value;
-        
-    var friendObj = findFriend(sOwnerId);
-   
 
-    addPetToFriend(friendObj, sName,sType,sGender);
-    drawPetsTable();
+      if(sName == '' || sType == '' || sGender == ''){
+        alert('Error!, tienes que rellenar todos los campos, para enviarle un comentario!')
+        return;
+      }else{
+
+        var friendObj = findFriend(sOwnerId);
+
+      addPetToFriend(friendObj, sName,sType,sGender);
+      drawPetsTable();
+      }
 
   }
 
